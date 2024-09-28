@@ -1,14 +1,9 @@
 fun main() {
-    println("Данная преобразует введенное натуральное число из 10-ичной системы в двоичную.\n")
-    while (true) {
-        println("Введите натуральное число (введите 'exit' для выхода):")
+    println("Данная преобразует введенное натуральное число из 10-ичной системы в двоичную.")
+
+        println("Введите натуральное число:")
 
         val input = readln().trim()
-
-        if (input.equals("exit", ignoreCase = true)) {
-            println("Программа завершена.")
-            break
-        }
 
         try {
             val numb = input.toInt()
@@ -16,7 +11,6 @@ fun main() {
             if (numb <= 0) {
                 println("Ошибка: Введено не натуральное число")
                 println()
-                continue
             }
 
             val binaryString = Integer.toBinaryString(numb)
@@ -29,4 +23,3 @@ fun main() {
 
         println()
     }
-}
